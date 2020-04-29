@@ -1,0 +1,77 @@
+ <mat-card>
+    <mat-card-title>Sign Up</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="userform" (ngSubmit)="onSubmit()">
+                <mat-form-field>
+                    <mat-label>Role Account</mat-label>
+                    <mat-select disableRipple formControlName="frole" id="frole" [(ngModel)]="createUser.RoleId">
+                        <mat-option value="1">Customer</mat-option>
+                        <mat-option value="2">Admin</mat-option>
+                    </mat-select>
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                </mat-form-field> 
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your Name" formControlName="fname" id="fname" [(ngModel)]="createUser.Name">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field> 
+            <mat-form-field>
+                <mat-label>Telephone</mat-label>
+                <!-- <span matPrefix>+91 &nbsp;</span> -->
+                <input matInput type="text" placeholder="98840-51230" formControlName="fmobile" id="fmobile"  [(ngModel)]="createUser.MobileNumber">
+                <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>  
+            <mat-form-field>
+                <mat-label>Choose Dob</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="fdob" id="fdob"
+                    readonly (click)="picker.open()" [(ngModel)]="createUser.DateOfBirth">
+                <mat-datepicker-toggle matSuffix [for]="picker" disabled></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field> 
+            <mat-form-field>
+                <mat-label>Gender</mat-label>
+                <mat-select disableRipple formControlName="fgender" id="fgender" [(ngModel)]="createUser.Gender">
+                    <mat-option value="male">Male</mat-option>
+                    <mat-option value="female">Female</mat-option>
+                    <mat-option value="Other">Other</mat-option>
+                </mat-select>
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+ 
+            <mat-form-field>
+                <input matInput type="text" placeholder="Email" formControlName="femail" id="femail" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="createUser.EmailId">
+                <mat-hint>Ex:pat@example.com</mat-hint>
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field> 
+            <mat-form-field>
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password"
+                formControlName="fpass" id="pass" minlength="8" [(ngModel)]="createUser.Password" id="fpass">
+                <mat-hint color="warning">Password must be Atleast 8 charecters long*</mat-hint>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+            </mat-form-field>
+            <br/><br/>
+            <!-- <mat-form-field>
+                <mat-label>Created Date</mat-label>
+                <input matInput [matDatepicker]="picker1"  formControlName="fcreateddate" 
+                    readonly (click)="picker1.open()" id="fcreateddate">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field> 
+              <mat-form-field>
+                  <mat-label>Modified Date</mat-label>
+                <input matInput [matDatepicker]="picker2"  formControlName="fmodifydate" id="fmodifydate"
+                    readonly (click)="picker2.open()">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field>
+                <input type="number" matInput placeholder="User Active?" value="1"  formControlDate="fuserIsActive" [(ngModel)]="createUser.UserIsActive" id="fuserIsActive">
+              </mat-form-field> -->
+              <div class="button">
+                <button type="submit" mat-button>Sign Up</button>
+              </div>
+        </form>
+    </mat-card-content>
+   
+</mat-card> 

@@ -1,0 +1,115 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+   <mat-toolbar color="primary">Menu</mat-toolbar>
+   <mat-nav-list>
+    
+     <a mat-list-item routerLink="home">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>&nbsp;
+      Home
+     </a>
+    
+     <a mat-list-item href="#">
+      <mat-icon>shopping_basket</mat-icon>&nbsp;
+      Shop by Product</a>
+    
+     <a mat-list-item href="#">
+      <mat-icon>view_list</mat-icon>&nbsp;
+      Your Orders</a>
+     <mat-divider></mat-divider>
+     <a mat-list-item routerLink="wishList">
+      <mat-icon>shopping_cart</mat-icon>&nbsp;
+      Cart Items</a>
+    
+     <a mat-list-item href="#">
+      <mat-icon>shop</mat-icon>&nbsp;
+      Buy Again
+     </a>
+
+     
+     <a mat-list-item href="#">
+      <mat-icon>account_circle</mat-icon>&nbsp;
+      Your Account</a>
+  
+     <a mat-list-item href="#">
+      <mat-icon>payment</mat-icon>&nbsp;
+      Payment</a>
+     <mat-divider></mat-divider>
+     <a mat-list-item href="#">
+      <mat-icon>info</mat-icon>&nbsp;
+      About</a>
+  
+     <a mat-list-item routerLink="contact">
+      <mat-icon>phone</mat-icon>&nbsp;
+      Contact</a>
+     
+     <a mat-list-item href="#">
+      <mat-icon>help</mat-icon>&nbsp;
+      Help</a>
+      
+      <a mat-list-item routerLink="feedback">
+    <mat-icon>feedback</mat-icon>&nbsp;
+        Feedback</a>
+
+     <a mat-list-item href="#">
+      <mat-icon>logout</mat-icon>&nbsp;
+      Sign Out</a>
+     
+   </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+    <button mat-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>&nbsp;
+    </button>
+    <form class="example-form">
+     <mat-form-field class="example-full-width">
+       <!-- <mat-label>Search</mat-label> -->
+       <input type="text" 
+       matInput [formControl]="myControl" placeholder="Search" aria-label="text" matInput [matAutocomplete]="auto">
+       <mat-icon>search</mat-icon>      
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              <br>
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+          <span class="spacer"> </span> 
+          <a href="#">
+            <mat-icon>logout</mat-icon>&nbsp;
+     </a>
+   
+  </mat-toolbar>
+
+  <!-- <div class="row">
+    <div *ngFor="let p of data">
+    <div class="col-md-3 col-sm-6">
+     <div class="card-deck">
+       4 of these -->
+       <!-- <div class="card">
+         <img class="card-img-top img-adjusted" [src]="p.image" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title"><b><i>{{p.name}}</i></b></h4>
+            <p class="card-text"><i><b>Desciption: </b>{{p.shortDescription}}</i></p>
+            <p class="card-text"><i><b>MRP :</b><strike>{{p.mrp}}</strike></i></p>
+            <p class="card-text"><i><b>Deal Price :</b></i>{{p.dealPrice}}</p>
+            <star-rating-comp [starType]="'icon'">{{p.rating}}</star-rating-comp>
+            <p><button type="button" class="btn btn-primary">Add to Cart</button></p>
+          </div>
+       </div>
+     </div>
+    </div>
+   </div>
+</div> --> 
+
+ 
+  <router-outlet></router-outlet>
+
+
+ </mat-sidenav-content>
+ 
+
+</mat-sidenav-container>

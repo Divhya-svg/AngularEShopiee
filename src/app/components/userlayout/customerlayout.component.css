@@ -1,0 +1,44 @@
+
+mat-sidenav{
+  background: white;
+  position: fixed;
+  width: 300px;
+  font-size:larger;
+  height: 100%;
+}
+mat-list-item a{
+  padding: 10px 5px;
+  border-bottom: 1px solid rgba(100,100,100,0.3);
+
+}
+  
+ 
+.spacer{
+  flex: 1 1 auto;
+}
+
+mat-toolbar a {
+  display: inline-block;
+  margin: 0px 10px;
+  text-decoration: none;
+  color: white;
+}
+
+
+.mat-option{
+  font-size: 10;
+  font-family: sans-serif;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.mat-option{
+ 
+  font: 1em sans-serif;
+}

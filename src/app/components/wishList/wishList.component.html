@@ -1,0 +1,38 @@
+<div class="container">
+ 
+    <div class="row">
+      <div class="col-md-3 col-sm-6" *ngFor="let w of wishListProduct">
+        <div class="card-deck">
+        <div class="card">
+         <img class="card-img-top img-fluid" [src]="w.image" alt="Card image cap">
+          <div class="card-body">
+           <div class="card-title"><i><b>{{w.name}}</b></i></div>
+           <div class="card-text">
+             {{w.shortdesc}}
+             <br>
+             <i><b>MRP :</b><strike> ₹{{w.mrp}}</strike></i>
+             <br/>
+             <i><b>Deal Price :</b></i> ₹{{w.dealPrice}}
+             <br/><br/>
+             <mat-icon>star</mat-icon>
+             <mat-icon>star</mat-icon>
+             <mat-icon>star</mat-icon>
+             <mat-icon>star</mat-icon>
+             <mat-icon>star_half</mat-icon>
+             <br/>
+             <i><b>{{w.rating}}</b></i>
+             <mat-divider></mat-divider>
+             <b>DateOfCartAdd:</b><i>{{w.dateOfCartAdd}}</i>
+           </div>
+           <br/>
+           <mat-divider></mat-divider>
+           <br/>
+          <button color="primary" (click)= addWishListItem()>Buy</button>
+              <!-- <mat-icon>add_shopping_cart</mat-icon> -->
+            
+         </div>
+       </div>
+     </div>
+   </div>
+   </div>
+   </div>  

@@ -1,0 +1,57 @@
+// .card {
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//     max-width: 300px;
+//     margin: auto;
+//     text-align: center;
+//     font-family: arial;
+//   }
+  
+//   .price {
+//     color: grey;
+//     font-size: 22px;
+//   }
+  
+//   .card button {
+//     border: none;
+//     outline: 0;
+//     padding: 12px;
+//     text-align: center;
+//     cursor: pointer;
+//     width: 100%;
+//     font-size: 18px;
+   
+//   }
+h4{
+  font-size: x-large;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p{
+  font-size: large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card{
+  width: 20px;
+  height:40vh;
+  border-radius: solid 2px;
+}
+.img-adjusted{
+  position: relative;
+  float: left;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  width: 200px;
+  }
+
+  
+// div{
+//     float: left;
+// }
+//  img{
+//     width: 100px;
+    
+// }  
+// .card{
+//     width: 400px;
+//     height:70vh;
+// }

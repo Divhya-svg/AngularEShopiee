@@ -1,0 +1,69 @@
+<!-- <body>
+    <div class="row">
+        <div *ngFor="let p of data">
+            <div class="col-lg-4">
+                <img class="card-img-top" [src]="p.image" alt="Card image">
+                <div class="card-body">
+                    <h3>{{p.name}}</h3>
+                    <h3>Specifications</h3>
+                    <ul>
+                        <li>{{p.rating}}</li>
+                        <li>{{p.shortDescription}}</li>
+                        <li>{{p.mrp}}</li>
+                        <li>{{p.dealPrice}}</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>  -->
+  
+<!-- <div class="card">
+    <div *ngFor="let p of data">
+        <img class="card-img-top" [src]="p.image" alt="Card image">
+    
+    
+    <h1>{{p.name}}</h1>
+    <p class="price">{{p.mrp}}</p>
+    <p>{{p.dealPrice}}</p>
+    <p>{{p.shortDescription}}</p>
+    <p>{{p.rating}}</p>
+    <p><button>Add to Cart</button></p>
+  </div>
+</div>
+
+
+<div class="card-deck" *ngFor="let p of data">
+    <div class="card">
+      <img class="card-img-top" [src]="p.image" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Name :{{p.name}}</h5>
+        <p class="card-text">Desciption: {{p.shortDescription}}</p>
+        <p class="card-text">MRP :{{p.mrp}}</p>
+        <p class="card-text">DealPrice :{{p.dealPrice}}</p>
+        <p><button type="btn btn-primary">Add to Cart</button></p>
+      </div>
+    </div> -->
+
+
+    <div class="row">
+        <div *ngFor="let p of data">
+        <div class="col-12">
+         <div class="card-deck">
+           <!-- 4 of these -->
+           <div class="card">
+             <img class="card-img-top img-adjusted" [src]="p.image" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title"><b><i>{{p.name}}</i></b></h4>
+                <p class="card-text"><i><b>Desciption: </b>{{p.shortDescription}}</i></p>
+                <p class="card-text"><i><b>MRP :</b><strike>{{p.mrp}}</strike></i></p>
+                <p class="card-text"><i><b>Deal Price :</b></i>{{p.dealPrice}}</p>
+                <star-rating-comp [starType]="'icon'">{{p.rating}}</star-rating-comp>
+                <p><button type="button" class="btn btn-primary">Add to Cart</button></p>
+              </div>
+           </div>
+         </div>
+        </div>
+       </div>
+    </div>

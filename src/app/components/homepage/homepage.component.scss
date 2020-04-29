@@ -1,0 +1,25 @@
+.container{
+ 
+    margin-top: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+   }
+   
+   .col{
+     display: table;
+     padding: 16px;
+     max-height: 300px;
+   }
+   .div{
+     margin-top: 5px;
+   }
+   .row{
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+   .row> [class*='col-']{
+       display: table;
+       flex-direction: column;
+   }

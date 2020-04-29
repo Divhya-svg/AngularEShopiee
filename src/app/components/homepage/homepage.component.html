@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6" *ngFor="let p of data">
+        
+        <div class="card">
+         <img class="card-img-top img-fluid" [src]="p.image" alt="Card image cap">
+          <div class="card-body">
+           <div class="card-title"><i><b>{{p.name}}</b></i></div>
+           <div class="card-text">
+             {{p.shortDescription}}
+             <br>
+             <i><b>MRP :</b><strike> ₹{{p.mrp}}</strike></i>
+             <br/>
+             <i><b>Deal Price :</b></i> ₹{{p.dealPrice}}
+             <br/><br/>
+             <mat-icon>star</mat-icon>
+             <mat-icon>star</mat-icon>
+             <mat-icon>star</mat-icon>
+             <mat-icon>star</mat-icon>
+             <mat-icon>star_half</mat-icon>
+             <br/>
+             <i><b>{{p.rating}}</b></i>
+           </div>
+           <br/>
+           <mat-divider></mat-divider>
+           <br/>
+          <button button mat-raised-button color="primary" (click)=addProduct()>Buy</button>
+             <!-- <mat-icon>add_shopping_cart</mat-icon>
+            -->
+         </div>
+       </div>
+    
+   </div>
+   </div>
+   </div> 
+   <!-- <footer>
+    <mat-paginator [length]="66"
+    [pageSize]="11"
+    [pageSizeOptions]="[11, 22, 33, 44,55,66]">
+</mat-paginator>
+   </footer> -->

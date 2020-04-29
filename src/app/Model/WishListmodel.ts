@@ -1,0 +1,24 @@
+export class WishList{
+    UserId:Int32Array;
+    CartId:Int32Array;
+    ProductId:Int32Array;
+    Rating:any;
+    Name:string;
+    ShortDescription:string;
+    Image:string;
+    MRP:string;
+    DealPrice:string;
+    DateOfCartAdd:any;
+    constructor(userId?,cartId?,productId?,rating?,name?,shortdesc?,image?,mrp?,dealPrice?,dateOfCartAdd?){
+        this.UserId=userId;
+        this.CartId=cartId;
+        this.ProductId=productId;
+        this.Rating=rating;
+        this.Name=name;
+        this.ShortDescription=shortdesc;
+        this.Image=image;
+        this.MRP=mrp;
+        this.DealPrice=dealPrice;
+        this.DateOfCartAdd=dateOfCartAdd;
+    }
+}
